@@ -17,6 +17,7 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
 .rr-header {
   background: $black;
   padding: 1rem 1.5rem;
@@ -39,16 +40,60 @@ html, body {
     gap: 0.8rem;
     flex-wrap: wrap;
 
-    .rr-lang-switcher {
-      padding: 0.3rem 0.6rem;
-      background: #fff;
-      color: $black;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      border: none;
-      cursor: pointer;
+    .rr-lang-dropdown {
+      position: relative;
+      display: inline-block;
       flex-shrink: 0;
+
+      .rr-lang-button {
+        background: #fff;
+        color: $black;
+        padding: 0.4rem 0.8rem;
+        border-radius: 6px;
+        border: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        transition: background 0.2s, color 0.2s;
+
+        &:hover {
+          background: $yellow;
+          color: $black;
+        }
+      }
+
+      .rr-lang-menu {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        width: 160px;
+        z-index: 1000;
+        overflow: hidden;
+        animation: fadeIn 0.15s ease-in-out;
+
+        div {
+          padding: 0.6rem 0.9rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.9rem;
+          color: $black;
+
+          &:hover {
+            background: $yellow;
+            color: $black;
+          }
+        }
+      }
     }
 
     .rr-nav-btn {
@@ -86,15 +131,28 @@ html, body {
       justify-content: flex-start;
       gap: 0.6rem;
 
-      .rr-nav-btn, .rr-lang-switcher {
+      .rr-nav-btn, .rr-lang-dropdown {
         flex: 1 1 auto;
         text-align: center;
-        padding: 0.6em 0;
+
+        .rr-lang-button {
+          width: 100%;
+        }
       }
     }
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .rr-hero {
   text-align: center;
@@ -178,3 +236,24 @@ html, body {
   margin-top: auto;
 }
 
+/* Floating WhatsApp icon */
+.rr-whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.2s;
+}
+
+.rr-whatsapp-float:hover {
+  transform: scale(1.1);
+}
