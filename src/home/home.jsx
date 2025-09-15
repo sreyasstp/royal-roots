@@ -34,7 +34,7 @@ const englishContent = {
       Karpatské námestie 7770/10A,<br />
       Bratislava - Rača 83106 Slovakia<br />
       <span>Mob: <a href="tel:+421915172199">+421 915 172 199</a></span><br />
-      <span>Website: <a href="https://www.royalroots.sk">www.royalroots.sk</a></span><br />
+      {/* <span>Website: <a href="https://www.royalroots.sk">www.royalroots.sk</a></span><br /> */}
       <span>Email: <a href="mailto:Info@royalroots.sk">Info@royalroots.sk</a></span>
     </>
   ),
