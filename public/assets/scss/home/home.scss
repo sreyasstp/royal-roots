@@ -3,6 +3,12 @@ $black: #191919;
 $gray: #f7f7f7;
 $font-main: 'Segoe UI', 'Popins', Arial, sans-serif;
 
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .rr-root {
   font-family: $font-main;
   background: linear-gradient(135deg, $black 70%, $yellow 140%);
