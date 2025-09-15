@@ -236,24 +236,38 @@ html, body {
   margin-top: auto;
 }
 
-/* Floating WhatsApp icon */
-.rr-whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366; /* WhatsApp green */
-  color: white;
-  border-radius: 50%;
+// /* Floating WhatsApp icon */
+// .rr-whatsapp-float {
+//   position: fixed;
+//   width: 60px;
+//   height: 60px;
+//   bottom: 20px;
+//   right: 20px;
+//   background-color: #25d366; /* WhatsApp green */
+//   color: white;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+//   z-index: 999;
+//   transition: transform 0.2s;
+// }
+
+// .rr-whatsapp-float:hover {
+//   transform: scale(1.1);
+// }
+
+.rr-whatsapp-btn {
+  background-color: #25d366; // WhatsApp green
+  color: #fff;
+  
+  &:hover {
+    background-color: #128c7e;
+    color: #fff;
+  }
+
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  transition: transform 0.2s;
-}
-
-.rr-whatsapp-float:hover {
-  transform: scale(1.1);
 }

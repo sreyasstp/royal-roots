@@ -27,7 +27,14 @@ const HomePage = () => {
               </div>
             )}
           </div>
-          <a href="tel:+421915172199" className="rr-nav-btn">{content.callUs}</a>
+          <a
+            href="https://wa.me/421915172199"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rr-nav-btn rr-whatsapp-btn"
+          >
+            <FaWhatsapp style={{ marginRight: '0.5rem' }} /> WhatsApp
+          </a>
           <a href="mailto:Info@royalroots.sk" className="rr-nav-btn">{content.emailUs}</a>
         </nav>
       </header>
@@ -47,14 +54,14 @@ const HomePage = () => {
         <p>{content.footer}</p>
       </footer>
 
-      <a
+      {/* <a
         href="https://wa.me/421915172199"
         target="_blank"
         rel="noopener noreferrer"
         className="rr-whatsapp-float"
       >
         <FaWhatsapp size={28} />
-      </a>
+      </a> */}
     </div>
   );
 };
